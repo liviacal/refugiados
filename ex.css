@@ -1,0 +1,265 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav{
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 6vh;
+  background-color: rgb(241, 230, 230);
+  font-family: "roboto",sans-serif;
+  
+}
+
+.logo{
+  color:black;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 20px;
+  font-family: "roboto",sans-serif;
+}
+.links{
+  display: flex;
+  background-color: rgb(241, 230, 230);
+  justify-content: space-around;
+  width: 30%;
+  font-family: "roboto",sans-serif;
+}
+.links li{
+  list-style: none;
+}
+.links a{
+  color: black;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "roboto",sans-serif;
+}
+.cel{
+  display: none;
+}
+
+.cel div{
+width: 25px;
+height: 3px;
+background-color:black;;
+margin: 5px;
+transition: all 0.3s ease;
+}
+/* mobile */
+@media screen and (max-width:2090px){
+  .links{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width:768px){
+  body{
+    overflow-x: hidden;
+  }
+  .links{
+    position: absolute;
+    right: 0%;
+   height: 92vh;
+   top:6vh;
+   color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    
+    
+  }
+  .links li{
+    opacity: 0;
+    
+  }
+  .cel{
+    display: block;
+    cursor: pointer;
+ 
+  }
+}
+.nav-active{
+  transform: translateX(0%);
+  
+}
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .linha1{
+transform: rotate(-45deg )translate(-5px,6px);
+}
+.toggle .linha2{
+  opacity:0;
+}
+.toggle .linha3{
+  transform: rotate(45deg )translate(-5px,-6px);
+}
+body{
+  background-color: white 
+ 
+}
+
+html,body{
+  height: 100%;/*to make sure the html&body r the same size n fits the whole page*/
+}
+.foto1{
+  position: absolute;
+  left: 0%;
+  top: 5vh;
+  width: 100%;
+  height: 100vh;
+  z-index: -1; 
+}
+:root{
+  /* root tvariable we can use througout css , we can call the variable*/
+  --main-color:white
+  --secondary-color:white
+}
+/**/ /**/ /**/
+@font-face {
+  font-family:"roboto" ;
+  src: url(./Roboto/Roboto-Regular.ttf);
+}
+h2{
+  font-size: 3rem;
+  line-height: 125%;/*adds more escpace between line*/
+  padding:1rem 0rem;/*adds more escpace on the bottom but not left and right*/
+}
+
+h3{
+  padding:1rem 0rem;
+  font-size: 2rem;
+  line-height: 125%;
+}
+  
+
+.Inicial{
+  min-height: 100vh;/*makes the acultupacao div b hal the page 0,50vh but 100vh makes the whole page */
+  color:rgb(255, 255, 255) ;
+}
+
+.texto-de-imagem-principal{
+  font: bolder;
+  color:rgb(238, 226, 226) ;
+  margin-top: 44vh;
+  font-family: "roboto-bold",sans-serif;
+; /*1- x axis 2-yaxis and 12px=blur the lower the more blury and less faded out*/
+  text-align: center;
+  text-shadow: 0px 0px 44px rgb(241, 230, 230);
+  color:rgb(240, 225, 225);
+}
+
+.texto-de-imagem-principal h3{
+  font-size: 2rem;
+  margin-top: 3vh;
+  font-family:"roboto", sans-serif;
+  font-weight: 700;
+  text-shadow: 0px 0px 44px rgb(241, 230, 230)
+  
+}
+
+.foto1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+.basico{
+text-align: center;
+font-family: "argonite",sans-serif;
+}
+
+ /* position: relative;
+  background-color: rgb(116, 186, 240); /* Define a cor de fundo da caixa *
+  border-radius: 15px;  Adiciona bordas arredondadas 
+  padding: 20px;  Adiciona espaço interno 
+  margin: 20px;  Adiciona margem para separar das outras seções 
+  color: rgb(0, 0, 0); Define a cor do texto dentro da caixa 
+}
+*/
+/* Estilos para a seção "missao" */
+.missao {
+  position: relative;
+  background-color: rgb(241, 230, 230);/* Define a cor de fundo da caixa */
+
+  border-radius: 15px; /* Adiciona bordas arredondadas */
+  padding: 20px; /* Adiciona espaço interno */
+  margin: 20px 8%; /* Set margin left and right to 8% */
+  color: rgb(0, 0, 0); /* Define a cor do texto dentro da caixa */
+  
+}
+
+.missao h3{
+  font-family: "roboto", sans-serif;
+  text-align: justify; /* Centraliza o texto */
+  margin: 0 auto; /* Remove margens extras nas laterais */
+  width: 70%; /* Define a largura máxima do título */
+  margin-left: 2%;
+  letter-spacing: 2.2px;
+
+}
+.missao p{
+  text-align: justify;
+  line-height: 150%;
+  font-size: 1.2rem;
+  margin-left: 1.5%;
+  margin-right: 2%;
+  font-family: "roboto", sans-serif;
+}
+.basico{
+  background-color: rgb (65,150,197) ;
+}
+.tour{ 
+  position: relative;
+  background-color: rgb(241, 230, 230);/* Define a cor de fundo da caixa */
+  border-radius: 15px; /* Adiciona bordas arredondadas */
+  padding: 20px; /* Adiciona espaço interno */
+  margin: 20px; /* Adiciona margem para separar das outras seções */
+  color: rgb(0, 0, 0); /* Define a cor do texto dentro da caixa */
+  margin-left: 8%;
+  margin-right: 8%;
+}
+.tour h3{
+  font-family: "roboto", sans-serif;
+  text-align: justify; /* Centraliza o texto */
+  margin: 0 auto; /* Remove margens extras nas laterais */
+  width: 70%; /* Define a largura máxima do título */
+  margin-left: 2%;
+  letter-spacing: 2.2px;
+}
+.tour p{
+  text-align: justify;
+  line-height: 150%;
+  font-size: 1.2rem;
+  margin-left: 1.5%;
+  margin-right: 2%;
+  font-family: "roboto", sans-serif;
+}
+iframe {
+
+    width: 100%;
+    margin: 20px auto;
+    
+    border: 3px solid #f1e6e6;
+    border-radius: 3px;
+}

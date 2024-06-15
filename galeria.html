@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aculturação Capixaba - Galeria</title>
+  <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <h4>Aculturação Capixaba</h4>
+    </div>
+    <ul class="links">
+      <li><a href="index.html">Menu</a></li>
+      <li><a href="cultura.html">Cultura</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+    </ul>
+    <div class="cel">
+      <div class="linha1"></div>
+      <div class="linha2"></div>
+      <div class="linha3"></div>
+    </div>
+  </nav>
+ 
+ <div class="imagem-completa" id="caixaCompleta">
+  <img src="foto1.jpg" id="imagemCompleta">
+  <span onclick="fecharImagem()">X</span>
+ </div>
+
+    <div class="galeria">
+      <img src="foto1.jpg" onclick="abrirImagem(this.src)" >
+      <img src="foto2.jpg" onclick="abrirImagem(this.src)" > 
+      <img src="foto3.jpg" onclick="abrirImagem(this.src)" >
+      <img src="foto4.jpg" onclick="abrirImagem(this.src)" >
+      <img src="foto5.jpg"  onclick="abrirImagem(this.src)" >
+      <img src="fotoo8.jpg" onclick="abrirImagem(this.src)"  >
+     <img src="foto7.jpg"onclick="abrirImagem(this.src)" >
+      <img src="foto6.jpg"onclick="abrirImagem(this.src)" >
+      <img src="foto99.jpg" onclick="abrirImagem(this.src)">
+       <img src="foto10.jpg" onclick="abrirImagem(this.src)">
+       <img src="foto11.jpg" onclick="abrirImagem(this.src)">
+    </div>
+  
+ 
+  <script src="app.js"></script>
+<script>
+  var caixaCompleta= document.getElementById("caixaCompleta")
+  var imagemCompleta=document.getElementById("imagemCompleta")
+
+  function abrirImagem(foto){
+    caixaCompleta.style.display="flex"
+    imagemCompleta.src=foto
+  }
+  function fecharImagem(){
+    caixaCompleta.style.display="none"
+    
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 6vh;
+  background-color: rgb(241, 230, 230);
+  font-family: "roboto",sans-serif;
+  }
+  .logo{
+    color:black;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 20px;
+    font-family: "roboto",sans-serif;
+  }
+  .links{
+    display: flex;
+    background-color: rgb(241, 230, 230);
+    justify-content: space-around;
+    width: 30%;
+    font-family: "roboto",sans-serif;
+  }
+.links li{
+  list-style: none;
+}
+.links a{
+  color: black;
+  text-decoration: none;
+  letter-spacing: 2px;
+  
+  font-size: 15px;
+  font-family: "roboto",sans-serif;
+}
+.cel{
+  display: none;
+}
+
+.cel div{
+width: 25px;
+height: 3px;
+background-color:black;;
+margin: 5px;
+transition: all 0.3s ease;
+}
+/* mobile */
+@media screen and (max-width:2090px){
+  .links{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width:768px){
+  body{
+    overflow-x: hidden;
+    
+  }
+  .links{
+    position: absolute;
+    right: 0%;
+   height: 92vh;
+   top:6vh;
+   color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    
+    
+  }
+  .links li{
+    opacity: 0;
+    
+  }
+  .cel{
+    display: block;
+    cursor: pointer;
+ 
+  }
+}
+.nav-active{
+  transform: translateX(0%);
+  
+}
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .linha1{
+transform: rotate(-45deg )translate(-5px,6px);
+}
+.toggle .linha2{
+  opacity:0;
+}
+.toggle .linha3{
+  transform: rotate(45deg )translate(-5px,-6px);
+}
+@font-face {
+  font-family:"roboto" ;
+  src: url(./Roboto/Roboto-Regular.ttf);
+}
+
+
+.resto h2{
+  margin-bottom: 20px; /* Add some space between each heading and the images */
+  font-family: "roboto",sans-serif;
+}
+
+
+
+body{
+  background-color: rgb(255, 255, 255);
+  line-height: 1.7;
+}
+
+html,body{
+  height: 100%;/*to make sure the html&body r the same size n fits the whole page*/
+}
+.home2{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+.Inicial{
+  min-height: 100vh;/*makes the acultupacao div b hal the page 0,50vh but 100vh makes the whole page */
+  color:rgb(255, 255, 255) ;
+}
+
+
+
+.article-title{
+  font-size: 4rem;
+  font: bold;
+  
+  margin-top: 44vh;
+  font-family: "roboto",sans-serif;
+
+  text-align: center;
+  color:rgb(0, 0, 0);
+
+}
+.title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 3vh;
+  font-family:"roboto", sans-serif;
+  align-items: center;
+  color: black;
+  text-align: center;
+  
+}
+.resto p {
+  text-align: justify;
+  font-family: "roboto-bold",sans-serif;
+  font-size: 20px;
+  
+}
+.resto h2{
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px; /* Add some space between each heading and the images */
+}
+
+.resto{
+  background-color:white;
+  align-items: center;
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+  justify-content: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 20px;
+  text-align: center; /* Center-align text within the .resto section *
+  /*background-color: rgb(254, 244, 244) ;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;*/
+
+}
+
+.resto img{
+  margin: 10px; /* Add margin around each image */
+  width: 80vh;
+  height: auto; /* Ensure the height adjusts proportionally to the width */
+  max-width: 100%; /* Ensure the image does not exceed its container width */
+
+}
+
+
+
+
+.resto p,h2,img {
+  font-family: "argonite",sans-serif;
+animation: fade linear both;
+animation-timeline: view();
+animation-range: entry 50% cover 50%;
+}
+@keyframes fade{
+  from {
+    opacity:0.7;
+    
+  }
+  to{opacity: 1;
+}
+}
+.musica img{
+  height :8px;
+}
